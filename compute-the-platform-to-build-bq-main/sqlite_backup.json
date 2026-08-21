@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": "cmskbimc80000dn53cvrduhii",
+      "email": "samirangit2006@gmail.com",
+      "password": "$2b$10$J/rSwYZtgk94cLeJ.jgR6.ugzrFf2MQ/fhBoAxz0ohEIyySzTGsae",
+      "name": "Samiran Bera"
+    },
+    {
+      "id": "cmsmz2wpp00001078pwf76g3m",
+      "email": "samiran2006@gmail.com",
+      "password": "$2b$10$4x7ifYrAjw1KJsqV8eZA5OPBJiNPstZfhDWuCTrjkr0ngno.UODP2",
+      "name": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "cmska9ha50001124eebnp6cqr",
+      "title": "Test Project",
+      "description": "Test Description",
+      "imageUrl": "",
+      "link": "",
+      "order": 0,
+      "createdAt": "2026-08-08T11:21:17.502Z",
+      "updatedAt": "2026-08-08T11:21:17.502Z"
+    },
+    {
+      "id": "cmsmzb33200011078gbzbwipy",
+      "title": "Study brain ai",
+      "description": "app that make you fall in love with studiexs\n",
+      "imageUrl": "",
+      "link": "https://studybrain-ai.onrender.com/",
+      "order": 0,
+      "createdAt": "2026-08-10T08:37:55.166Z",
+      "updatedAt": "2026-08-10T08:37:55.166Z"
+    }
+  ],
+  "techStack": [
+    {
+      "id": "99202eda-ef91-49db-aaa1-66c34a209de5",
+      "name": "HTML",
+      "category": "webdev",
+      "iconName": "",
+      "order": 0,
+      "createdAt": "2026-08-10T08:32:23.596Z",
+      "updatedAt": "2026-08-10T08:32:23.596Z"
+    },
+    {
+      "id": "6bafffbc-6615-4105-8fb8-9a870b90dad0",
+      "name": "CSS",
+      "category": "webdev",
+      "iconName": "",
+      "order": 0,
+      "createdAt": "2026-08-10T08:32:53.211Z",
+      "updatedAt": "2026-08-10T08:32:53.211Z"
+    }
+  ],
+  "skills": [],
+  "experience": [],
+  "settings": [
+    {
+      "id": "default",
+      "heroTitle": "Samiran Bera",
+      "heroSub": "Software Engineer",
+      "aboutText": "I build modern web apps.",
+      "email": "samiranbera2006@gmail.com",
+      "githubUrl": "https://github.com/Alex-2006-alt",
+      "linkedinUrl": "",
+      "twitterUrl": "",
+      "updatedAt": "2026-08-08T11:32:33.691Z"
+    }
+  ]
+}
