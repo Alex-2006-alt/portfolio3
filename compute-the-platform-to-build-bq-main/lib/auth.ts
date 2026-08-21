@@ -4,6 +4,7 @@ import { prisma } from "./prisma"
 import bcrypt from "bcryptjs"
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET || "some-very-secret-key-123456",
   session: {
     strategy: "jwt",
   },
@@ -22,17 +23,26 @@ export const authOptions: NextAuthOptions = {
           return null
         }
 
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email },
+        const cleanEmail = credentials.email.trim().toLowerCase()
+
+        const user = await prisma.user.findFirst({
+          where: {
+            email: {
+              equals: cleanEmail,
+              mode: "insensitive",
+            },
+          },
         })
 
         if (!user) {
+          console.log(`Login attempt failed: user not found (${cleanEmail})`)
           return null
         }
 
-        const isPasswordValid = await bcrypt.compare(credentials.password, user.password)
+        const isPasswordValid = await bcrypt.compare(credentials.password.trim(), user.password)
 
         if (!isPasswordValid) {
+          console.log(`Login attempt failed: incorrect password for (${cleanEmail})`)
           return null
         }
 
