@@ -181,9 +181,9 @@ export function HeroSection({ settings }: { settings?: any }) {
       >
         <div className="max-w-[1400px] mx-auto flex justify-center items-start gap-10 lg:gap-20">
           {[
-            { value: "5+", label: "years experience" },
-            { value: "50+", label: "projects completed" },
-            { value: "100%", label: "client satisfaction" },
+            { value: settings?.yearsExperience || "5+", label: "years experience" },
+            { value: settings?.projectsCompleted || "50+", label: "projects completed" },
+            { value: settings?.clientSatisfaction || "100%", label: "client satisfaction" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col gap-2">
               <span className="text-3xl lg:text-4xl font-display text-white">{stat.value}</span>
