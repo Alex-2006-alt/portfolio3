@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { motion } from "framer-motion";
 
 export function HowItWorksSection({ experience }: { experience?: any[] }) {
+  const router = useRouter();
   const experiences = experience && experience.length > 0 ? experience : [
     {
       title: "Senior Full Stack Engineer",
@@ -76,6 +78,11 @@ export function HowItWorksSection({ experience }: { experience?: any[] }) {
             />
             {/* Fade sur le bord gauche */}
             <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.09_0.01_260)] via-transparent to-transparent pointer-events-none" />
+            {/* Secret admin login area */}
+            <div 
+              onDoubleClick={() => router.push('/admin')}
+              className="absolute bottom-0 left-0 w-full h-1/4 z-20 cursor-default"
+            />
           </div>
         </div>
 
