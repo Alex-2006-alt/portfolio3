@@ -66,5 +66,8 @@ model Settings {
   githubUrl   String @default("")
   linkedinUrl String @default("")
   twitterUrl  String @default("")
+  yearsExperience    String @default("5+")
+  projectsCompleted  String @default("50+")
+  clientSatisfaction String @default("100%")
   updatedAt   DateTime @updatedAt
 }
