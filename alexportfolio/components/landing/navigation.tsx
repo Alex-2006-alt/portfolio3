@@ -65,9 +65,7 @@ export function Navigation({ settings }: { settings?: any }) {
           </div>
 
           <div className="hidden lg:flex items-center gap-6 h-full">
-            <Link href="/admin" className="text-sm font-medium text-white/70 hover:text-white transition-colors duration-300">
-              Admin
-            </Link>
+
             
             <Button variant="outline" size="sm" className="hidden sm:flex border-white/20 text-white hover:bg-white hover:text-black transition-all">
               <Download className="mr-2 h-4 w-4" />
@@ -137,14 +135,7 @@ export function Navigation({ settings }: { settings?: any }) {
             >
               Resume
             </Button>
-            <Link href="/admin" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button 
-                variant="outline" 
-                className="w-full h-14 text-base rounded-full bg-white/5 border-white/10 text-white hover:bg-white/10"
-              >
-                Admin
-              </Button>
-            </Link>
+
             <Button 
               className="flex-1 bg-white text-black hover:bg-white/90 rounded-full h-14 text-base"
               onClick={() => setIsMobileMenuOpen(false)}
