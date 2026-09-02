@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, Briefcase, Settings, Clock, Layers, LogOut, Code2, Users } from "lucide-react";
+import { LayoutDashboard, Briefcase, Settings, Clock, Layers, LogOut, Code2, Users, Home } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -63,7 +63,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           })}
         </nav>
 
-        <div className="pt-8 border-t border-white/10 mt-auto">
+        <div className="pt-8 border-t border-white/10 mt-auto space-y-2">
+          <Link href="/">
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start text-zinc-400 hover:text-white hover:bg-white/5"
+            >
+              <Home size={18} className="mr-3" />
+              View Site
+            </Button>
+          </Link>
           <Button 
             variant="ghost" 
             className="w-full justify-start text-zinc-400 hover:text-white hover:bg-white/5"
