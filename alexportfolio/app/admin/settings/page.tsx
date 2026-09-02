@@ -19,6 +19,9 @@ export default function SettingsAdmin() {
     githubUrl: "",
     linkedinUrl: "",
     twitterUrl: "",
+    yearsExperience: "5+",
+    projectsCompleted: "50+",
+    clientSatisfaction: "100%",
   });
 
   useEffect(() => {
@@ -94,6 +97,37 @@ export default function SettingsAdmin() {
               onChange={(e) => setFormData({...formData, aboutText: e.target.value})}
               className="bg-black/50 border-white/10 text-white placeholder:text-zinc-600 h-32 focus:border-white/30"
             />
+          </div>
+
+          <h3 className="text-lg font-display text-white mt-6 pt-6 border-t border-white/10">Hero Stats</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+            <div className="space-y-2">
+              <Label className="text-zinc-300">Years Experience</Label>
+              <Input 
+                value={formData.yearsExperience} 
+                onChange={(e) => setFormData({...formData, yearsExperience: e.target.value})}
+                placeholder="e.g. 5+"
+                className="bg-black/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-white/30"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label className="text-zinc-300">Projects Completed</Label>
+              <Input 
+                value={formData.projectsCompleted} 
+                onChange={(e) => setFormData({...formData, projectsCompleted: e.target.value})}
+                placeholder="e.g. 50+"
+                className="bg-black/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-white/30"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label className="text-zinc-300">Client Satisfaction</Label>
+              <Input 
+                value={formData.clientSatisfaction} 
+                onChange={(e) => setFormData({...formData, clientSatisfaction: e.target.value})}
+                placeholder="e.g. 100%"
+                className="bg-black/50 border-white/10 text-white placeholder:text-zinc-600 focus:border-white/30"
+              />
+            </div>
           </div>
         </div>
 
