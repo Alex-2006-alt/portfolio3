@@ -73,10 +73,6 @@ export function CtaSection({ settings }: { settings?: any }) {
                     {email}
                   </a>
                 </div>
-
-                <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  Based in San Francisco, CA
-                </p>
               </div>
 
               {/* Right image */}
