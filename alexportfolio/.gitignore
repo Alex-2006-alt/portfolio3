@@ -21,3 +21,4 @@ node_modules
 tsconfig.tsbuildinfo
 skills-lock.json
 .agents/
+sqlite_backup.json

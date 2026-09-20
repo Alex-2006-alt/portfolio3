@@ -72,10 +72,11 @@ export function Navigation({ settings }: { settings?: any }) {
               Resume
             </Button>
             <Button
+              asChild
               size="sm"
               className={`rounded-full transition-all duration-500 ${isScrolled ? "bg-foreground hover:bg-foreground/90 text-background px-4 h-8 text-xs" : "bg-white hover:bg-white/90 text-black px-6"}`}
             >
-              Contact Me
+              <a href="#contact">Contact Me</a>
             </Button>
           </div>
 
@@ -137,10 +138,11 @@ export function Navigation({ settings }: { settings?: any }) {
             </Button>
 
             <Button 
+              asChild
               className="flex-1 bg-white text-black hover:bg-white/90 rounded-full h-14 text-base"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact Me
+              <a href="#contact">Contact Me</a>
             </Button>
           </div>
         </div>

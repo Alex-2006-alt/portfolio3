@@ -58,11 +58,21 @@ export function ImageUpload({ value, onChange }: ImageUploadProps) {
 
   const handleManualUrlSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (manualUrl.trim()) {
-      onChange(manualUrl.trim());
-      setManualUrl("");
-      setShowUrlInput(false);
-      toast.success("Image URL updated!");
+    const url = manualUrl.trim();
+    if (url) {
+      try {
+        const parsedUrl = new URL(url);
+        if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
+          toast.error("URL must start with http:// or https://");
+          return;
+        }
+        onChange(url);
+        setManualUrl("");
+        setShowUrlInput(false);
+        toast.success("Image URL updated!");
+      } catch (err) {
+        toast.error("Invalid URL format");
+      }
     }
   };
 
