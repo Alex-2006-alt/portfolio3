@@ -36,8 +36,7 @@ compute-the-platform-to-build-bq-main/
 │   │   └── stats.ts            # Fetch dashboard stats
 │   │
 │   └── api/                    # API Route Handlers
-│       ├── auth/[...nextauth]/  # NextAuth authentication endpoint
-│       └── setup/route.ts      # One-time setup route (first-run bootstrap)
+│       └── auth/[...nextauth]/  # NextAuth authentication endpoint
 │
 ├── components/                 # React components
 │   ├── landing/                # 🌐 Public portfolio sections
@@ -149,7 +148,6 @@ Defined in `.env` at the project root. **Never commit this file to Git.**
 | `/admin/settings`           | 🔒 Admin   | Edit your name, bio, email, social links |
 | `/admin/admins`             | 🔒 Admin   | Manage other admin accounts              |
 | `/api/auth/[...nextauth]`   | Public     | NextAuth login / session endpoints       |
-| `/api/setup`                | Public     | One-time first-run setup bootstrap       |
 
 ---
 
@@ -163,7 +161,7 @@ npm install
 npx prisma db push
 
 # 3. Seed the first admin user
-node seed_admin.mjs
+ADMIN_EMAIL=admin@example.com ADMIN_PASSWORD=StrongPassword123! node seed_admin.mjs
 
 # 4. Start the development server
 npm run dev
@@ -172,9 +170,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to see the public portfolio.  
 Open [http://localhost:3000/admin/login](http://localhost:3000/admin/login) to access the admin panel.
 
-**Default admin credentials** (set in `seed_admin.mjs`):
-- Email: `samirangit2006@gmail.com`
-- Password: `sbking 420`
+**First-time admin login**:
+Use the email and password you provided via `ADMIN_EMAIL` and `ADMIN_PASSWORD` to the `seed_admin.mjs` script.
 
 ---
 
