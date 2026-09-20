@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 }
 
 import { Toaster } from "@/components/ui/sonner"
+import { SmoothScroll } from "@/components/smooth-scroll"
 
 export default function RootLayout({
   children,
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <SmoothScroll />
         {children}
         <Toaster />
         <Analytics />
